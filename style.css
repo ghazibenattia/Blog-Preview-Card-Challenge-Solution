@@ -1,0 +1,42 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: hsl(47, 88%, 63%);
+    /* Yellow background */
+    display: flex;
+    /* Flex layout for centering */
+    flex-direction: column;
+    /* Ensures vertical stacking of content */
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: center;
+    /* Centers content vertically */
+    min-height: 100svh;
+    /* Ensures conent fills the viewpoint */
+}
+
+/* Container Styling */
+.container {
+    max-width: 20rem;
+    /* 320px for responsivness */
+}
+
+/*Card Styling */
+.card {
+    background-color: hsl(0, 0%, 100%);
+    padding: 1.5rem;
+    box-shadow: 5px 10px;
+    border-radius: 0.625rem;
+    border: 1px solid black;
+}
+
+.attribution {
+    font-size: 0.75rem;
+    margin-top: 2rem;
+}
