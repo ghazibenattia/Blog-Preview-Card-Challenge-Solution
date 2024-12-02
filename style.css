@@ -92,7 +92,7 @@ body {
 }
 
 /* Styling for the yellow background label */
-.yellow-bg h2{
+.yellow-bg h1{
     background-color: hsl(47, 88%, 63%);
     /* Sets a yellow background color for the label */
     padding: 4px 15px;
@@ -101,6 +101,7 @@ body {
     /* Rounds the corners of the label */
     width: 7.8rem;
     /* Sets a fixed width for the label */
+    font-size: 1.5rem;
 }
 
 /* Styling for the published date text */
@@ -123,7 +124,7 @@ a {
 
 /* Blog post title styling */
 .blog-post-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     /* Sets the font size for the title */
     font-weight: 800;
     /* Makes the title bold */
