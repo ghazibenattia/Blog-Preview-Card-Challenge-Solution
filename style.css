@@ -92,14 +92,14 @@ body {
 }
 
 /* Styling for the yellow background label */
-.yellow-bg {
+.yellow-bg h2{
     background-color: hsl(47, 88%, 63%);
     /* Sets a yellow background color for the label */
-    padding: 4px 12px;
+    padding: 4px 15px;
     /* Adds padding inside the label */
     border-radius: 4px;
     /* Rounds the corners of the label */
-    width: 90px;
+    width: 7.8rem;
     /* Sets a fixed width for the label */
 }
 
@@ -123,7 +123,7 @@ a {
 
 /* Blog post title styling */
 .blog-post-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     /* Sets the font size for the title */
     font-weight: 800;
     /* Makes the title bold */
@@ -178,7 +178,7 @@ a {
 }
 
 /* Styling for the author's name */
-.blog-post-avatar-container h4 {
+.blog-post-avatar-container h3 {
     margin-left: 1rem;
     /* Adds space between the avatar and the author's name */
     font-size: 15px;
