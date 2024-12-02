@@ -1,42 +1,234 @@
-/* CSS Reset */
+/* Reset default margin, padding, and box-sizing across all elements */
 * {
     margin: 0;
+    /* Removes default margin for all elements */
     padding: 0;
+    /* Removes default padding for all elements */
     box-sizing: border-box;
+    /* Ensures padding and border are included in the element's total width and height */
+    font-family: 'Figtree', sans-serif;
+    /* Sets the font family globally */
 }
 
-/* Body Styling */
+/* Styling for the body element */
 body {
     background-color: hsl(47, 88%, 63%);
-    /* Yellow background */
+    /* Sets a yellow background color for the entire page */
     display: flex;
-    /* Flex layout for centering */
+    /* Uses flexbox to align items */
     flex-direction: column;
-    /* Ensures vertical stacking of content */
+    /* Stacks the content vertically */
     align-items: center;
-    /* Centers content horizontally */
+    /* Centers the content horizontally */
     justify-content: center;
-    /* Centers content vertically */
-    min-height: 100svh;
-    /* Ensures conent fills the viewpoint */
+    /* Centers the content vertically */
+    height: 100vh;
+    /* Makes the body take up the full height of the viewport */
 }
 
-/* Container Styling */
-.container {
-    max-width: 20rem;
-    /* 320px for responsivness */
-}
-
-/*Card Styling */
-.card {
+/* Main container for the preview card */
+#preview-card-container {
+    width: 384px;
+    /* Sets a fixed width for the card */
+    height: 565px;
+    /* Sets a fixed height for the card */
     background-color: hsl(0, 0%, 100%);
-    padding: 1.5rem;
-    box-shadow: 5px 10px;
-    border-radius: 0.625rem;
-    border: 1px solid black;
+    /* Sets a white background color for the card */
+    border-radius: 20px;
+    /* Rounds the corners of the card */
+    border: 1px solid hsl(0, 0%, 0%);
+    /* Adds a thin black border around the card */
+    box-shadow: 8px 8px 0px 0px hsl(0, 0%, 0%);
+    /* Adds a subtle shadow around the card */
+    padding: 1.2rem;
+    /* Adds padding inside the card */
+    margin: 3rem auto;
+    /* Centers the card horizontally with top and bottom margin */
+    display: flex;
+    /* Uses flexbox to arrange child elements */
+    flex-direction: column;
+    /* Arranges content vertically inside the card */
+    justify-content: space-between;
+    /* Ensures content is spaced out evenly inside the card */
+    padding-bottom: 1rem;
+    /* Adds extra padding at the bottom of the card */
 }
 
+/* Container for the image inside the card */
+.preview-card-img {
+    display: flex;
+    /* Uses flexbox to align the image */
+    align-items: center;
+    /* Vertically centers the image */
+    justify-content: center;
+    /* Horizontally centers the image */
+    border-radius: 10px;
+    /* Rounds the corners of the image container */
+    overflow: hidden;
+    /* Ensures content is clipped to fit the container */
+    width: 100%;
+    /* Makes the container take up the full width of the card */
+    height: 200px;
+    /* Sets a fixed height for the image container */
+}
+
+.preview-card-img img {
+    width: 100%;
+    /* Makes the image take up the full width of the container */
+    height: 100%;
+    /* Makes the image fill the height of the container */
+    object-fit: cover;
+    /* Ensures the image covers the container while maintaining its aspect ratio */
+    border-radius: 10px;
+    /* Rounds the corners of the image */
+}
+
+/* Container for the text inside the preview card */
+.preview-card-text {
+    margin-top: 1.2rem;
+    /* Adds space above the text */
+    margin-left: 5px;
+    /* Adds a small left margin to the text */
+}
+
+/* Styling for the yellow background label */
+.yellow-bg {
+    background-color: hsl(47, 88%, 63%);
+    /* Sets a yellow background color for the label */
+    padding: 4px 12px;
+    /* Adds padding inside the label */
+    border-radius: 4px;
+    /* Rounds the corners of the label */
+    width: 90px;
+    /* Sets a fixed width for the label */
+}
+
+/* Styling for the published date text */
+.published-date {
+    font-size: 14px;
+    /* Sets the font size for the date */
+    font-weight: 500;
+    /* Sets the font weight to medium */
+    margin-top: .7rem;
+    /* Adds space above the date */
+    margin-bottom: 1rem;
+    /* Adds space below the date */
+}
+
+/* Styling for all anchor tags (removes underlines) */
+a {
+    text-decoration: none;
+    /* Removes the underline from all anchor tags globally */
+}
+
+/* Blog post title styling */
+.blog-post-title {
+    font-size: 24px;
+    /* Sets the font size for the title */
+    font-weight: 800;
+    /* Makes the title bold */
+    margin-top: .7rem;
+    /* Adds space above the title */
+    margin-bottom: 1rem;
+    /* Adds space below the title */
+    transition: color .2s ease-in;
+    /* Adds a smooth color transition effect on hover */
+    color: hsl(0, 0%, 0%);
+    /* Sets the title color to black */
+}
+
+/* Prevent underline specifically for the blog post title link */
+.blog-post-title a {
+    text-decoration: none !important;
+    /* Ensures the link inside the title has no underline */
+    color: inherit !important;
+    /* Inherits the title's color */
+}
+
+/* Hover effect for the blog post title */
+.blog-post-title:hover {
+    color: hsl(47, 88%, 63%);
+    /* Changes the title color to yellow on hover */
+}
+
+/* Styling for the preview text paragraph */
+.preview-text {
+    color: hsl(0, 0%, 42%);
+    /* Sets the text color to gray */
+    font-size: 16px;
+    /* Sets the font size for the preview text */
+    font-weight: 500;
+    /* Sets the font weight to medium */
+    line-height: 1.6;
+    /* Sets the line height for better readability */
+    margin-bottom: 0.2rem;
+    /* Adds space below the preview text */
+}
+
+/* Container for the author's avatar and name */
+.blog-post-avatar-container {
+    display: flex;
+    /* Uses flexbox to arrange avatar and name */
+    align-items: center;
+    /* Vertically centers the avatar and name */
+    margin-top: 0.5rem;
+    /* Adds space above the avatar container */
+    margin-bottom: 0.2rem;
+    /* Adds a small bottom margin to the avatar container */
+}
+
+/* Styling for the author's name */
+.blog-post-avatar-container h4 {
+    margin-left: 1rem;
+    /* Adds space between the avatar and the author's name */
+    font-size: 15px;
+    /* Sets the font size for the name */
+    font-weight: 800;
+    /* Makes the author's name bold */
+}
+
+/* Styling for the author's avatar */
+.blog-post-avatar-container img {
+    width: 40px;
+    /* Sets the width of the avatar */
+    height: 40px;
+    /* Sets the height of the avatar */
+    border-radius: 50%;
+    /* Makes the avatar circular */
+    object-fit: cover;
+    /* Ensures the avatar image covers the circle container */
+}
+
+/* Media Queries for smaller screen sizes */
+@media screen and (max-width: 500px) {
+    #preview-card-container {
+        width: 90%;
+        /* Makes the card take up 90% of the screen width on small screens */
+        margin: 2rem auto;
+        /* Adds margin around the card and centers it */
+    }
+
+    /* Ensures the image resizes properly on smaller screens */
+    .preview-card-img img {
+        width: 100%;
+        /* Makes the image take up 100% of the container width */
+        height: auto;
+        /* Adjusts the height automatically to maintain aspect ratio */
+    }
+}
+
+/* Attribution section for copyright and credits */
 .attribution {
-    font-size: 0.75rem;
-    margin-top: 2rem;
+    font-size: 13px;
+    /* Sets the font size for attribution text */
+    text-align: center;
+    /* Centers the attribution text */
+}
+
+/* Styling for the attribution links */
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    /* Sets a specific color for attribution links */
+    text-decoration: underline;
+    /* Underlines the attribution links */
 }

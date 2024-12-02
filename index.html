@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
-
-  <!--Link to CSS Stylesheet-->
-  <link rel="Stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Figtree font for styling -->
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@500;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Blog Preview Card Solution</title>
 </head>
+
 <body>
-  <main class="container">
-    <div class="card">
-      Learning
-
-      Published 21 Dec 2023
-
-      HTML & CSS foundations
-
-      These languages are the backbone of every website, defining structure, content, and presentation.
-
-      Greg Hooper
+  <!-- Main content of the blog preview card -->
+  <section id="preview-card-container">
+    <!-- Image container for the blog post -->
+    <div class="preview-card-img">
+      <!-- The SVG image representing the featured image of the blog post -->
+      <img src="./assets/images/illustration-article.svg" alt="Featured Image" class="card-img">
     </div>
-  </main>
-  
-  <footer class="attribution">
-    <p>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
+
+    <!-- Text content of the blog preview -->
+    <div class="preview-card-text">
+      <!-- Tag or category for the blog post -->
+      <div class="yellow-bg">
+        <h4>Learning</h4>
+      </div>
+
+      <!-- Date when the blog post was published -->
+      <p class="published-date">Published 21 Dec 2023</p>
+
+      <!-- Link to the blog post title -->
+      <a href="index.html">
+        <h2 class="blog-post-title">HTML & CSS foundations</h2>
+      </a>
+      <!-- Short preview of the blog post content -->
+      <p class="preview-text">These languages are the backbone of every website, defining structure, content, and
+        presentation.</p>
+    </div>
+
+    <!-- Author section with the avatar and name -->
+    <div class="blog-post-avatar-container">
+      <!-- Image representing the author -->
+      <img src="./assets/images/image-avatar.webp" alt="Blog Post Author Avatar">
+      <!-- Name of the blog post author -->
+      <h4>Greg Hooper</h4>
+    </div>
+  </section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/ghazibenattia">Ghazi Benattia</a>.
+  </div>
 </body>
+
 </html>
